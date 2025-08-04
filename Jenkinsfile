@@ -1,17 +1,13 @@
 pipeline {
     agent any
+    tools {
+        maven "maven 3.8.8"
+    }
     stages {
-        stage('build') {
+        stage ('maven') {
             steps {
-                script {
-                    def course = "k8s"
-                    if(course=="k8s"){
-                        println("hello")
-                    }
-                    else
-                    println("bye")
-                    sleep 5
-                }
+                echo "hello maven"
+                sh "mvn --version"
             }
         }
     }
