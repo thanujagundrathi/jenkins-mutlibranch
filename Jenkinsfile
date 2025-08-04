@@ -6,5 +6,15 @@ pipeline {
                 echo "hello world"
             }
         }
+        stage ('Dev') {
+            steps {
+                echo "welcome to dec environment"
+            }
+        }
+        stage ('Test') {
+            steps {
+                echo "welcome to test area"
+            }
+        }
     }
 }
