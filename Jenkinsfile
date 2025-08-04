@@ -10,6 +10,7 @@ pipeline {
                     }
                     else
                     println("bye")
+                    sleep 5
                 }
             }
         }
