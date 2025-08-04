@@ -1,14 +1,17 @@
 pipeline {
     agent any
-    environment {
-        name = "thanu"
-        courses = "devops"
-        }
-            stages {
-                stage('build') {
-                    steps {
-                        echo "you enrolled to ${courses}" 
+    stages {
+        stage('build') {
+            steps {
+                script {
+                    def course==k8s
+                    if(course==k8s){
+                        println("hello")
                     }
+                    else
+                    println("bye")
                 }
             }
         }
+    }
+}
