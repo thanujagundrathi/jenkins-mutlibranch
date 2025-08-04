@@ -1,20 +1,14 @@
 pipeline {
     agent any
-    stages {
-        stage ('Build') {
-            steps {
-                echo "hello world"
+    environment {
+        name = "thanu"
+        courses = "devops"
+        }
+            stages {
+                stage('build') {
+                    steps {
+                        echo "you enrolled to ${courses}" 
+                    }
+                }
             }
         }
-        stage ('Dev') {
-            steps {
-                echo "welcome to dec environment"
-            }
-        }
-        stage ('Test') {
-            steps {
-                echo "welcome to test area"
-            }
-        }
-    }
-}
